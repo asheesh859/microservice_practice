@@ -1,4 +1,7 @@
 package com.lcwd.user.service.repository;
 
-public interface UserRepository {
+import com.lcwd.user.service.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User,String> {
 }
