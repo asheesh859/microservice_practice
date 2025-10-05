@@ -2,6 +2,7 @@ package com.lcwd.user.service.controller;
 
 import com.lcwd.user.service.entity.User;
 import com.lcwd.user.service.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
+    @Autowired
     private UserService userService;
 
         //create User
@@ -30,7 +32,7 @@ public class UserController {
 
     }
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<User>> getAllUser(){
        List<User> user =  userService.getAllUsers();
        return ResponseEntity.ok(user);
