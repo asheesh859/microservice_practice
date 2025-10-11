@@ -28,4 +28,6 @@ public class User {
     @Column(name = "ABOUT")
     private String about;
 
+    private List<Rating> rating;
+
 }
