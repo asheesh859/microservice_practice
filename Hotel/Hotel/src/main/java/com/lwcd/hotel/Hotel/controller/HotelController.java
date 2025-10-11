@@ -23,12 +23,13 @@ public class HotelController {
         return ResponseEntity.status(HttpStatus.CREATED).body(save_Hotel);
     }
     //single
-    @GetMapping("/{hotelId")
-    public ResponseEntity<Hotel> getHotelById(String id){
-        Hotel hotel = service.get(id);
+    @GetMapping("/{hotelId}")
+    public ResponseEntity<Hotel> getHotelById(@PathVariable String hotelId){
+        Hotel hotel = service.get(hotelId);
         return ResponseEntity.status(HttpStatus.OK).body(hotel);
     }
     //get all
+    @GetMapping
     public ResponseEntity<List<Hotel>> getAllHotel(){
         List<Hotel> result = service.getAll();
         return ResponseEntity.status(HttpStatus.OK).body(result);
