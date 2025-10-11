@@ -1,10 +1,10 @@
 package com.lcwd.user.service.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -28,6 +28,7 @@ public class User {
     @Column(name = "ABOUT")
     private String about;
 
-    private List<Rating> rating;
+    @Transient
+    private List<Rating> rating = new ArrayList<>();
 
 }
