@@ -20,6 +20,7 @@ public class HotelController {
     public ResponseEntity<Hotel> createHotel(@RequestBody Hotel hotel){
 
         Hotel save_Hotel = service.create(hotel);
+        System.out.println(save_Hotel);
         return ResponseEntity.status(HttpStatus.CREATED).body(save_Hotel);
     }
     //single
@@ -32,7 +33,6 @@ public class HotelController {
     @GetMapping
     public ResponseEntity<List<Hotel>> getAllHotel(){
         List<Hotel> result = service.getAll();
-        System.out.println("+");
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 }
