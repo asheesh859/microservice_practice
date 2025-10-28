@@ -16,7 +16,7 @@ public class GlobalExceptionHandler{
             map.put("message" , ex.getMessage());
             map.put("success" , false);
             map.put("status" , HttpStatus.NOT_FOUND);
-           
+
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(map);
     }
 }
