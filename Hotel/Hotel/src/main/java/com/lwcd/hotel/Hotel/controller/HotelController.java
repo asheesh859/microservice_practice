@@ -20,7 +20,7 @@ public class HotelController {
     public ResponseEntity<Hotel> createHotel(@RequestBody Hotel hotel){
 
         Hotel save_Hotel = service.create(hotel);
-        System.out.println(save_Hotel);
+
         return ResponseEntity.status(HttpStatus.CREATED).body(save_Hotel);
     }
     //single
