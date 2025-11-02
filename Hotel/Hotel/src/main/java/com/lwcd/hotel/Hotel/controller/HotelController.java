@@ -36,6 +36,7 @@ public class HotelController {
     public ResponseEntity<List<Hotel>> getAllHotel(){
         List<Hotel> result = service.getAll();
 
+        System.out.println();
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 }
