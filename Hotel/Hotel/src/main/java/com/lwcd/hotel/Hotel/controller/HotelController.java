@@ -27,15 +27,15 @@ public class HotelController {
     @GetMapping("/{hotelId}")
     public ResponseEntity<Hotel> getHotelById(@PathVariable String hotelId){
         Hotel hotel = service.get(hotelId);
-        System.out.println(hotel);
+
+
         return ResponseEntity.status(HttpStatus.OK).body(hotel);
     }
     //get all
     @GetMapping
     public ResponseEntity<List<Hotel>> getAllHotel(){
         List<Hotel> result = service.getAll();
-        System.out.println(result);
-        System.out.println(result);
+
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 }
