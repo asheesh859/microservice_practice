@@ -36,4 +36,10 @@ public class RatingImplService implements RatingService {
     public List<Rating> getRatingByHotelId(String hotelId) {
         return ratingRepository.findByHotelId(hotelId);
     }
+
+
+    @Override
+    public void deleteRatingById(String ratingId) {
+        ratingRepository.deleteById(ratingId);
+    }
 }

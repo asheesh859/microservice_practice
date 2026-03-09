@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lcwd.rating</groupId>
-	<artifactId>RatingService</artifactId>
+	<artifactId>com.lcwd.user.service.external.service.RatingService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>RatingService</name>
+	<name>com.lcwd.user.service.external.service.RatingService</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
